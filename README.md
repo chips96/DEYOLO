@@ -69,7 +69,7 @@ make it go through a depth-wise convolution layer.
 
 ## Visual comparison
 <div align="center">
-  <img src="imgs/comparison.png" alt="comparison" width="600" />
+  <img src="imgs/comparison.png" alt="comparison" width="800" />
 </div>
 
 ## Main Results
