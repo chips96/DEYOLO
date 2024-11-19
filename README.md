@@ -2,7 +2,7 @@
 
 ---
 
-<h4 align="center">Yishuo Chen<sup>1</sup>, Boran Wang<sup>1[✉️]</sup>[wangbr@mail.nankai.edu.cn](mailto:wangbr@mail.nankai.edu.cn), Xinyu Guo<sup>1</sup>, Wenbin Zhu<sup>1</sup>,  
+<h4 align="center">Yishuo Chen<sup>1</sup>, Boran Wang<sup>1(wangbr1025@gmail.com)</sup><a href="mailto:wangbr1025@gmail.com">✉️</a>, Xinyu Guo<sup>1</sup>, Wenbin Zhu<sup>1</sup>,  
 Jiasheng He<sup>1</sup>, Xiaobin Liu<sup>1</sup>  and Jing Yuan<sup>1,2,3</sup> </h4>
 <h4 align="center">1.College of Artificial Intelligence, Nankai University </h4>
 <h4 align="center">2.Engineering Research Center of Trusted Behavior Intelligence, Ministry of
