@@ -67,7 +67,7 @@ from ultralytics import YOLO
 model = YOLO("DEYOLOn.pt") # trained weights
 
 # Perform object detection on RGB and IR image
-model.predict([["ultralytics/assets/vi_1.png", "ultralytics/assets/vi_1.png"], # corresponding image pair
+model.predict([["ultralytics/assets/vi_1.png", "ultralytics/assets/ir_1.png"], # corresponding image pair
               ["ultralytics/assets/vi_2.png", "ultralytics/assets/ir_2.png"]], 
               save=True, imgsz=320, conf=0.5)
 ```
