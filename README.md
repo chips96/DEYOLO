@@ -56,12 +56,10 @@ train_results = model.train(
     imgsz=640,  # training image size
     device="cpu",  # device to run on, i.e. device=0 or device=0,1,2,3 or device=cpu
 )
-
-# Perform object detection on RGB and IR image
-model.predict
 ```
 
 ### Predict
+
 ```python
 from ultralytics import YOLO
 
@@ -79,6 +77,7 @@ Like [M3FD.yaml](./ultralytics/yolo/cfg/M3FD.yaml) and [LLVIP.yaml](./ultralytic
 
 <details>
   <summary>File structure</summary>
+
 ```
 Your dataset
 ├── ...
@@ -109,6 +108,7 @@ Your dataset
         ├── 101.txt
         └── ...
 ```
+
 </details>
 
 You can download the dataset using the following link:
