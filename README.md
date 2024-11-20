@@ -9,27 +9,111 @@ Jiasheng He<sup>1</sup>, Xiaobin Liu<sup>1</sup>  and Jing Yuan<sup>1,2,3</sup> 
  Education, Nankai University </h4>
 <h4 align="center">3.Tianjin Key Laboratory of Intelligence Robotics, Nankai University </h4>
 
-This repository is the code release of the paper DEYOLO: Dual-Feature-Enhancement YOLO for Cross-Modality Object Detection
+This repository is the code release of the paper *"DEYOLO: Dual-Feature-Enhancement YOLO for Cross-Modality Object Detection"*.
 
 ---
 
 ## Introduction 
 
-We design a dual-enhancement-based cross-modality object
- detection network DEYOLO, in which a semantic-spatial cross-modality
- module and a novel bi-directional decoupled focus module are designed
+We design a dual-enhancement-based cross-modality object detection network DEYOLO, in which a semantic-spatial cross-modality module and a novel bi-directional decoupled focus module are designed
  to achieve the detection-centered mutual enhancement of RGB-infrared
- (RGB-IR). Specifically, a dual semantic enhancing channel weight assign
-ment module (DECA) and a dual spatial enhancing pixel weight assign
-ment module (DEPA) are firstly proposed to aggregate cross-modality
+ (RGB-IR). Specifically, a dual semantic enhancing channel weight assignment module (DECA) and a dual spatial enhancing pixel weight assignment module (DEPA) are firstly proposed to aggregate cross-modality
  information in the feature space to improve the feature representation
  ability, such that feature fusion can aim at the object detection task.
  Meanwhile, a dual-enhancement mechanism, including enhancements for
  two-modality fusion and single modality, is designed in both DECA and
  DEPA to reduce interference between the two kinds of image modalities.
  Then, a novel bi-directional decoupled focus is developed to enlarge the
- receptive field of the backbone network in different directions, which im
-proves the representation quality of DEYOLO.
+ receptive field of the backbone network in different directions, which improves the representation quality of DEYOLO.
+
+## Document
+### Recommended Environment
+
+- [x] torch 1.13.0
+- [x] torchvision 0.14.0
+- [x] numpy 1.25.0
+
+```python
+conda create -n yolov8 python=3.9
+pip install pypi
+pip install torch==1.13.0+cu117 torchvision==0.14.0+cu117 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117
+pip install -e .
+```
+
+### Train
+You can choose DEYOLO's n/s/m/l/x model in [DEYOLO.yaml](./ultralytics/models/v8/DEYOLO.yaml)
+
+```python
+from ultralytics import YOLO
+
+# Load a model
+model = YOLO("ultralytics/models/v8/DEYOLO.yaml").load("yolov8n.pt")
+
+# Train the model
+train_results = model.train(
+    data="M3FD.yaml",  # path to dataset YAML
+    epochs=100,  # number of training epochs
+    imgsz=640,  # training image size
+    device="cpu",  # device to run on, i.e. device=0 or device=0,1,2,3 or device=cpu
+)
+
+# Perform object detection on RGB and IR image
+model.predict
+```
+
+### Predict
+```python
+from ultralytics import YOLO
+
+# Load a model
+model = YOLO("DEYOLOn.pt") # trained weights
+
+# Perform object detection on RGB and IR image
+model.predict([["ultralytics/assets/vi_1.png", "ultralytics/assets/vi_1.png"], # corresponding image pair
+              ["ultralytics/assets/vi_2.png", "ultralytics/assets/ir_2.png"]], 
+              save=True, imgsz=320, conf=0.5)
+```
+
+## dataset
+Like [M3FD.yaml](./ultralytics/yolo/cfg/M3FD.yaml) and [LLVIP.yaml](./ultralytics/yolo/cfg/LLVIP.yaml) You can use your own dataset.
+
+<details>
+  <summary>File structure</summary>
+```
+Your dataset
+├── ...
+├── images
+|   ├── vis_train
+|   |   ├── 1.jpg
+|   |   ├── 2.jpg
+|   |   └── ...
+|   ├── vis_val
+|   |   ├── 1.jpg
+|   |   ├── 2.jpg
+|   |   └── ...
+|   ├── Ir_train
+|   |   ├── 100.jpg
+|   |   ├── 101.jpg
+|   |   └── ...
+|   ├── Ir_val 
+|   |   ├── 100.jpg
+|   |   ├── 101.jpg
+|   |   └── ...
+└── labels
+    ├── vis_train
+    |   ├── 1.txt
+    |   ├── 2.txt
+    |   └── ...
+    └── vis_val
+        ├── 100.txt
+        ├── 101.txt
+        └── ...
+```
+</details>
+
+You can download the dataset using the following link:
+- [M3FD](https://github.com/JinyuanLiu-CV/TarDAL)
+- [LLVIP](https://github.com/bupt-ai-cz/LLVIP)
 
 ## Pipeline
 ### The framework
@@ -37,11 +121,9 @@ proves the representation quality of DEYOLO.
   <img src="imgs/network.png" alt="network" width="800" />
 </div>
 
- We incorporate dual-context col
-laborative enhancement modules (DECA and DEPA) within the feature extraction
+ We incorporate dual-context collaborative enhancement modules (DECA and DEPA) within the feature extraction
  streams dedicated to each detection head in order to refine the single-modality features
- and fuse multi-modality representations. Concurrently, the Bi-direction Decoupled Fo
-cus is inserted in the early layers of the YOLOv8 backbone to expand the network’s
+ and fuse multi-modality representations. Concurrently, the Bi-direction Decoupled Focus is inserted in the early layers of the YOLOv8 backbone to expand the network’s
  receptive fields.
 
 ### DECA and DEPA

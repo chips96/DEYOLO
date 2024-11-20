@@ -1,0 +1,24 @@
+# Ultralytics YOLO , AGPL-3.0 license
+# M3FD dataset
+# Example usage: yolo train data=M3FD.yaml
+
+# Train/val/test sets as dir: path/to/imgs
+path:  # dataset root dir
+train: images/vis_train  # train visible images (relative to 'path')
+train2: images/Ir_train  # train infrared images (relative to 'path')
+val: images/vis_val  # val visible images (relative to 'path')
+val2: images/Ir_val  # val infrared images (relative to 'path')
+test:   # test images (optional)
+
+#image_weights: True
+nc: 6
+
+
+# Classes
+names:
+  0: People
+  1: Car
+  2: Bus
+  3: Motorcycle
+  4: Lamp
+  5: Truck
