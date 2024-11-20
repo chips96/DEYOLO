@@ -72,7 +72,7 @@ model.predict([["ultralytics/assets/vi_1.png", "ultralytics/assets/vi_1.png"], #
               save=True, imgsz=320, conf=0.5)
 ```
 
-## dataset
+## Dataset
 Like [M3FD.yaml](./ultralytics/yolo/cfg/M3FD.yaml) and [LLVIP.yaml](./ultralytics/yolo/cfg/LLVIP.yaml) You can use your own dataset.
 
 <details open>
