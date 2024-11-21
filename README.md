@@ -159,6 +159,9 @@ make it go through a depth-wise convolution layer.
   <img src="imgs/map.png" alt="map" width="600" />
 </div>
 
+ The mAP<sub>50</sub> and mAP<sub>50−95</sub> of every category in M<sup>3</sup>FD dataset demonstrate the superiority of our method.
+
+
 ## Citation
 If you use this code or ideas from the paper for your research, please cite our paper:
 ```
