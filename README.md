@@ -161,8 +161,8 @@ make it go through a depth-wise convolution layer.
 
  The mAP<sub>50</sub> and mAP<sub>50−95</sub> of every category in M<sup>3</sup>FD dataset demonstrate the superiority of our method.
  weights：
- - [M3FD](通过百度网盘分享的文件：M3FD_best.pt链接：https://pan.baidu.com/s/1fZx0UjFcyTfRqZfgKRSZgA?pwd=3016 提取码：3016 )
- - [LLVIP](通过百度网盘分享的文件：LLVIP_best.pt链接：https://pan.baidu.com/s/1rw5qdCbvLTlcREoAsNMRXw?pwd=3016 提取码：3016 )
+ - [M3FD](https://pan.baidu.com/s/1fZx0UjFcyTfRqZfgKRSZgA?pwd=3016)
+ - [LLVIP](https://pan.baidu.com/s/1rw5qdCbvLTlcREoAsNMRXw?pwd=3016)
 
 
 ## Citation
