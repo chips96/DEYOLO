@@ -9,7 +9,10 @@ Jiasheng He<sup>1</sup>, Xiaobin Liu<sup>1</sup>  and Jing Yuan<sup>1,2,3</sup> 
  Education, Nankai University </h4>
 <h4 align="center">3.Tianjin Key Laboratory of Intelligence Robotics, Nankai University </h4>
 
-This repository is the code release of the paper *"DEYOLO: Dual-Feature-Enhancement YOLO for Cross-Modality Object Detection"*.
+This repository is the code release of the paper *"DEYOLO: Dual-Feature-Enhancement YOLO for Cross-Modality Object Detection"*. Pattern Recognition. ICPR 2024.
+
+- [ArXiv](https://arxiv.org/abs/2412.04931)
+- [ICPR](https://link.springer.com/chapter/10.1007/978-3-031-78447-7_16)
 
 ---
 
@@ -161,7 +164,7 @@ make it go through a depth-wise convolution layer.
 
  The mAP<sub>50</sub> and mAP<sub>50−95</sub> of every category in M<sup>3</sup>FD dataset demonstrate the superiority of our method.
  
- Weights：
+ Trained Weights：
  - [M3FD](https://pan.baidu.com/s/1fZx0UjFcyTfRqZfgKRSZgA?pwd=3016)
  - [LLVIP](https://pan.baidu.com/s/1rw5qdCbvLTlcREoAsNMRXw?pwd=3016)
 
