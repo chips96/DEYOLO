@@ -167,6 +167,7 @@ make it go through a depth-wise convolution layer.
  Trained Weights：
  - [M3FD](https://pan.baidu.com/s/1fZx0UjFcyTfRqZfgKRSZgA?pwd=3016)
  - [LLVIP](https://pan.baidu.com/s/1rw5qdCbvLTlcREoAsNMRXw?pwd=3016)
+ - [Kaist](https://pan.baidu.com/s/1b-NO4lteXK-TwSTBrGuXsQ?pwd=3016)
 
 
 ## Citation
