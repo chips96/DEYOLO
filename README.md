@@ -12,7 +12,6 @@ Jiasheng He<sup>1</sup>, Xiaobin Liu<sup>1</sup>  and Jing Yuan<sup>1,2,3</sup> 
 This repository is the code release of the paper *"DEYOLO: Dual-Feature-Enhancement YOLO for Cross-Modality Object Detection"*. Pattern Recognition. ICPR 2024.
 
 - [*[ArXiv]*](https://arxiv.org/abs/2412.04931)
-- [*[ICPR]*](https://link.springer.com/chapter/10.1007/978-3-031-78447-7_16)
 
 ---
 
